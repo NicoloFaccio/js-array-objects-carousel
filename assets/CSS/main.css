@@ -3,3 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+    height: 100vh;
+    background-color: aqua;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#test{
+    border: 3px solid black;
+    position: relative;
+}
+ 
+img{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.fa-chevron-up, 
+.fa-chevron-down {
+    position: absolute;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fa-chevron-up{
+    top: 10px;  
+}
+
+.fa-chevron-down{
+    bottom: 10px;
+}
