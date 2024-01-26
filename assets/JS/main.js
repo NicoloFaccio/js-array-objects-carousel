@@ -12,9 +12,13 @@
 // Milestone 2:
 // Aggiungere il **ciclo infinito** del carosello. Ovvero se la miniatura attiva è la prima e l'utente clicca la freccia verso destra, la miniatura che deve attivarsi sarà l'ultima e viceversa per l'ultima miniatura se l'utente clicca la freccia verso sinistra.
 
+const firstImage = document.querySelector("#images figure");
+const secondaryImages = document.querySelector("#images .carousel");
 const chevUp = document.querySelector(".fa-chevron-up");
 const chevDown = document.querySelector(".fa-chevron-down");
-const figureHtml = document.querySelector("figure")
+
+let currentImage = 0
+
 
 const imageHtml = [
 { 
@@ -43,17 +47,43 @@ const imageHtml = [
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum."  
 }];
 
-let firstImage = document.querySelector("#images figure");
-
 firstImage.innerHTML = `
-    <img src="./assets/img/image-1.jpg" alt="">
+    <img src="${imageHtml[currentImage].image}" alt="${imageHtml[currentImage].image}">
 
     <div>
         <h2>
-            Spiderman
+        ${imageHtml[currentImage].title}
         </h2>
         <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum.
+        ${imageHtml[currentImage].text}
         </p>
     </div>
 `
+
+imageHtml.forEach((element, index) => {
+    
+    const divCarousel = document.createElement("div")
+    divCarousel.className = "secondImage"
+    const figureCarousel = document.createElement("figure")
+    const imageCarousel = document.createElement("img")
+    imageCarousel.src = `${element.image}`
+
+    divCarousel.append( figureCarousel )
+    figureCarousel.append( imageCarousel )
+
+    console.log(divCarousel)
+
+    secondaryImages.append( divCarousel )
+});
+
+chevUp.addEventListener("click", function(){
+    if (currentImage === 0){
+        return currentImage = imageHtml.length-1
+    } else {
+        return currentImage--
+    }
+});
+
+chevDown.addEventListener("click", function(){
+    
+});
