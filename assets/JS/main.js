@@ -42,3 +42,18 @@ const imageHtml = [
     title: "Monte Bianco",
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum."  
 }];
+
+let firstImage = document.querySelector("#images figure");
+
+firstImage.innerHTML = `
+    <img src="./assets/img/image-1.jpg" alt="">
+
+    <div>
+        <h2>
+            Spiderman
+        </h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum.
+        </p>
+    </div>
+`
