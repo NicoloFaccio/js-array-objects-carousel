@@ -11,22 +11,36 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 #images {
     border: 3px solid black;
-    position: relative;
+    /* position: relative; */
+    width: 60%;
+    margin: 0 auto;
 }
  
-img{
-    width: 500px;
-    height: 300px;
+#images > figure img{
+    width: 100%;
+    max-height: 500px;
     object-fit: cover;
     display: block;
 }
 
-.fa-chevron-up, 
+.carousel {
+    display: flex;
+}
+
+.secondImage{
+    flex-basis: calc(100% / 5);
+}
+
+.secondImage > figure img{
+    width: 100%;
+    display: block;   
+}
+
+/* .fa-chevron-up, 
 .fa-chevron-down {
     position: absolute;
 
@@ -45,4 +59,4 @@ img{
 
 .fa-chevron-down{
     bottom: 10px;
-}
+} */

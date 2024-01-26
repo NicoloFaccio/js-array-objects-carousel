@@ -14,11 +14,31 @@
 
 const chevUp = document.querySelector(".fa-chevron-up");
 const chevDown = document.querySelector(".fa-chevron-down");
+const figureHtml = document.querySelector("figure")
 
-chevUp.addEventListener("click", function(){
-    console.log("ciao")
-});
-
-chevDown.addEventListener("click", function(){
-    console.log("mondo")
-});
+const imageHtml = [
+{ 
+    image: "./assets/img/image-1.jpg",
+    title: "Spiderman",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum."  
+}, 
+{ 
+    image: "./assets/img/image-2.jpg",
+    title: "Monte Rosa",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum."  
+},
+{ 
+    image: "./assets/img/image-4.jpg",
+    title: "Monte Cervino",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum."  
+},
+{ 
+    image: "./assets/img/image-5.jpg",
+    title: "Batman",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum."  
+},
+{ 
+    image: "./assets/img/image-6.jpg",
+    title: "Monte Bianco",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis expedita saepe voluptatem aut maxime animi alias optio accusamus mollitia, voluptatibus et voluptas velit amet soluta nostrum dolor? Nulla, harum."  
+}];
