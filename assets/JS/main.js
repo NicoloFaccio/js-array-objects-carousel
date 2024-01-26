@@ -61,7 +61,7 @@ firstImage.innerHTML = `
 `
 
 imageHtml.forEach((element, index) => {
-    
+
     const divCarousel = document.createElement("div")
     divCarousel.className = "secondImage"
     const figureCarousel = document.createElement("figure")
@@ -70,20 +70,46 @@ imageHtml.forEach((element, index) => {
 
     divCarousel.append( figureCarousel )
     figureCarousel.append( imageCarousel )
-
-    console.log(divCarousel)
-
     secondaryImages.append( divCarousel )
 });
 
 chevUp.addEventListener("click", function(){
+    const principalImage = firstImage.querySelector("img");
+    const principalTitle = firstImage.querySelector("h2");
+    const principalText = firstImage.querySelector("p");
+
     if (currentImage === 0){
-        return currentImage = imageHtml.length-1
+        currentImage = imageHtml.length-1
+
+        principalImage.src = `${imageHtml[currentImage].image}`
+        principalTitle.innerHTML = imageHtml[currentImage].title
+        principalText.innerHTML =  imageHtml[currentImage].text
+
     } else {
-        return currentImage--
+        currentImage--
+
+        principalImage.src = `${imageHtml[currentImage].image}`
+        principalTitle.innerHTML = imageHtml[currentImage].title
+        principalText.innerHTML =  imageHtml[currentImage].text
     }
 });
 
 chevDown.addEventListener("click", function(){
-    
+    const principalImage = firstImage.querySelector("img");
+    const principalTitle = firstImage.querySelector("h2");
+    const principalText = firstImage.querySelector("p");
+
+    if(currentImage === imageHtml.length-1){
+        currentImage = 0
+
+        principalImage.src = `${imageHtml[currentImage].image}`
+        principalTitle.innerHTML = imageHtml[currentImage].title
+        principalText.innerHTML =  imageHtml[currentImage].text
+    } else {
+        currentImage++
+
+        principalImage.src = `${imageHtml[currentImage].image}`
+        principalTitle.innerHTML = imageHtml[currentImage].title
+        principalText.innerHTML =  imageHtml[currentImage].text
+    }
 });
